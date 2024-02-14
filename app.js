@@ -26,6 +26,8 @@ btn.addEventListener('click', function(event){
   document.getElementById("first-name").value='';
   document.getElementById("last-name").value='';
   document.getElementById("message").value='';
+
+  event.preventDefault();
     
     
   

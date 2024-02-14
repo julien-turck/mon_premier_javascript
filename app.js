@@ -10,6 +10,12 @@ btn.addEventListener('click', function(event){
   newIdentity.innerHTML = (newFirstName.value +' '+ newName.value);
   let newComment = document.getElementById("commentaire");
   newComment.innerHTML = newMessage.value;
+
+  //création d'un nouveau bloc de commentaire
+  let blocPrincipal = document.getElementById("comment-list");
+  let item1 = document.getElementById("blocNiv-1");
+  var sousBloc = item1.cloneNode(true);
+  blocPrincipal.appendChild(sousBloc);
     
   
     

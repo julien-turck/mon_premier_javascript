@@ -1,6 +1,9 @@
 let btn = document.querySelector('button');
 btn.addEventListener('click', function(event){
   
+  //vérifie que le message d'erreur soit caché
+  document.getElementById("error-message").style.display = "none";
+  
   //récupération des champs du formulaire
   let newFirstName = document.getElementById("first-name");
   let newName = document.getElementById("last-name");
@@ -19,7 +22,7 @@ btn.addEventListener('click', function(event){
         let newComment = document.getElementById("commentaire");
         newComment.innerHTML = newMessage.value;
       
-        //création d'un nouveau bloc de commentaire
+        //création d'un nouveau bloc de commentaire à partir du bloc copié
         let blocPrincipal = document.getElementById("comment-list");
         let item1 = document.getElementById("blocNiv-1");
         var sousBloc = item1.cloneNode(true);
